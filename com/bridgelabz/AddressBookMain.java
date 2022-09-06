@@ -5,11 +5,8 @@ import java.util.*;
 public class AddressBookMain {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
         AddressBookSystem addressBook = new AddressBookSystem();
-
         Map<String, AddressBookSystem> addressBookMap = new HashMap<String, AddressBookSystem>();
 
         while (true) {

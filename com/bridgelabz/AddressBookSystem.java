@@ -33,7 +33,6 @@ public class AddressBookSystem {
                 .collect(Collectors.toList());
     }
 
-
     public List<Contacts> searchByState(String state) {
         return contactList.stream().filter(person -> person.getState().equalsIgnoreCase(state))
                 .collect(Collectors.toList());
