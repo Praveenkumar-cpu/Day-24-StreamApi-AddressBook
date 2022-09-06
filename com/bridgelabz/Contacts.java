@@ -5,6 +5,17 @@ public class Contacts {
     private int zip;
     private long phoneNumber;
 
+    public Contacts(String firstName, String lastName, String address, String city, String state, String email, int zip, long phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.email = email;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getFirstName() {
         return firstName;
     }
