@@ -1,14 +1,14 @@
 package com.bridgelabz;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class AddressBookSystem {
 
     public ArrayList<Contacts> contactList = new ArrayList<>();
+    public static Map<String, Contacts> nameHashMap = new HashMap<String, Contacts>();
+    public static Map<String, Contacts> cityHashMap = new HashMap<String, Contacts>();
+    public static Map<String, Contacts> stateHashMap = new HashMap<String, Contacts>();
 
 
     public boolean addContact(Contacts contact) {
@@ -37,6 +37,18 @@ public class AddressBookSystem {
     public List<Contacts> searchByState(String state) {
         return contactList.stream().filter(person -> person.getState().equalsIgnoreCase(state))
                 .collect(Collectors.toList());
+    }
+
+    public static void viewByName(Map<String, Contacts> nameHashMap) {
+        nameHashMap.entrySet().stream().forEach(e -> System.out.println(e.getKey() + "=" + e.getValue().toString()));
+    }
+
+    public static void viewByCity(Map<String, Contacts> cityHashMap) {
+        cityHashMap.entrySet().stream().forEach(e -> System.out.println(e.getKey() + "=" + e.getValue().toString()));
+    }
+
+    public static void viewByState(Map<String, Contacts> stateHashMap) {
+        stateHashMap.entrySet().stream().forEach(e -> System.out.println(e.getKey() + "=" + e.getValue().toString()));
     }
 
 

@@ -55,7 +55,7 @@ public class AddressBookMain {
                     System.out.println("Welcome to the search option:");
                     addressBook.searchByOptions();
                 case 5:
-                    sc.close();// for closing the program
+                    sc.close();
                     return;
                 default:
                     System.out.println("You Entered Invalid Choice....!");
